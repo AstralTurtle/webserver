@@ -18,7 +18,7 @@ app.listen(port, () => {
 	console.log(generateCode());
 });
 
-app.get("/:code", (req, res) => {
+app.get("/code/:code", (req, res) => {
 	const code = req.params.code;
 	if (games[code]) {
 		res.send(games[code]);
@@ -27,7 +27,7 @@ app.get("/:code", (req, res) => {
 	}
 });
 
-app.post("/:ip", (req, res) => {
+app.post("/ip/:ip", (req, res) => {
 	const ip = req.params.ip;
 	const code = generateCode();
 	games[code] = ip;
