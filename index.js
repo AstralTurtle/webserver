@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = 3012;
 
-const games = {};
+let games = {};
 
 function generateCode() {
 	var code = Math.random().toString(36).substring(2, 8);
