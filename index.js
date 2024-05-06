@@ -35,4 +35,9 @@ app.post("/:ip", (req, res) => {
 	console.log(games);
 });
 
+app.post("/clear", (req, res) => {
+	games = {};
+	res.send("Games cleared");
+});
+
 module.exports = { app, generateCode, games };
